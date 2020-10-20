@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.CustTblMapper">
+  <sql id="custTblCols">
+  cust_no,cust_name,cust_id,cust_pwd, cust_email,
+  cust_birth,cust_joindate
+  
+  </sql>
+  <select id="selectCustTblList" resultType="cust">
+    select <include refid="custTblCols"/> from cust_tbl 
+  </select>
+</mapper>
